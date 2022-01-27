@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <br><br>
+    <h2 class="ucl">The Ultimate Certamen Library</h2>
+    <br><br>
+    <form class="row g-3 justify-content-md-center" action="/find" method="post">
+        <div class="col-md-2">
+            <select class="form-select" name="level" id="levels">
+                {% for level in levels %}
+                    <option value={{ level["level"] }}>{{ level["level"] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-select" id="tourneys" name="tourneys">
+                {% for tournament in tournaments %}
+                    <option value={{ tournament["tournament"] }}>{{ tournament["tournament"] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-1">
+            <select class="form-select" id="years" name="years">
+                {% for year in years %}
+                    <option value={{ year["year"] }}>{{ year["year"] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit" value="Search" class="btn btn-primary col-md-1" formtarget=”_blank”>
+    </form>
+{% endblock %}
