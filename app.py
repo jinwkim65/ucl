@@ -25,6 +25,7 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
+# So we can send get request to index page
 @app.route("/")
 def index():
     return redirect("/find")
