@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let level = document.querySelector('#levels');
     let current_level = "Advanced"
     input.addEventListener('change', async function() {
-        if (input.value === "Elite" || input.value === "Premier") {
+        if (input.value === "Elite" || input.value === "Premier" || input.value === "EEL") {
             current_level = "Advanced%2B";
         }
         let response = await fetch("/find?t=" + input.value.toLowerCase() + "&level=" + current_level);
