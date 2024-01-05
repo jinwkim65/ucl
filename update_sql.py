@@ -1,4 +1,4 @@
-# Sets up OS database and txt files
+# Sets up SQL database and txt files
 
 import os
 import sqlite3
