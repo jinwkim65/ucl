@@ -1,5 +1,5 @@
-# ucl
-Ultimate Certamen Library
+# UCL
+Ultimate Certamen Library (www.certamenlibrary.org)
 
 Hello, and welcome to the UCL—the Ultimate Certamen Library. The UCL is a database of past Certamen questions. It lets you search for Certamen tournaments by its name, level, and year, and also lets you search through them for keywords. 
 
