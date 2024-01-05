@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <br><br>
+    <br><br>
+    <br><br>
+    <h2 class="ucl" style="color:white;">Ultimate Certamen Library</h2>
+    <br><br>
+    <form class="row g-3 justify-content-md-center" action="/" method="post">
+        <div class="col-md-3">
+            <select class="form-select" id="tourneys" name="tournament">
+                {% for tournament in tournaments %}
+                    <option value={{ tournament[0] }}>{{ tournament["tournament"].capitalize() }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-2">
+            <select class="form-select" id="level" name="level">
+                <!--LEVEL_START-->
+                {% for level in levels %}
+                    <option value={{ level[0] }}>{{ level[0].capitalize() }}</option>
+                {% endfor %}
+                <!--LEVEL_END-->
+            </select>
+        </div>
+        <div class="col-md-1">
+            <select class="form-select" id="years" name="year">
+                <!--YEAR_START-->
+                {% for year in years %}
+                    <option value={{ year[0] }}>{{ year[0] }}</option>
+                {% endfor %}
+                <!--YEAR_END-->
+            </select>
+        </div>
+        <input type="submit" value="Search" class="btn btn-primary col-md-1" formtarget=”_blank”>
+    </form>
+
+{% endblock %}
