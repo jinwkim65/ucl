@@ -29,9 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Year is updated
     year.addEventListener('change', async function() {
         current_year = year.value;
+        current_level = level.value;
         let response = await fetch("/?tournament=" + tournament.value + "&year=" + current_year);
         let html = await response.text();
         let level_html = html.substring(html.indexOf("<!--LEVEL_START-->") + 18, html.indexOf("<!--LEVEL_END-->") + 16);
         level.innerHTML = level_html;
+        level.value = current_level;
     });
 });
