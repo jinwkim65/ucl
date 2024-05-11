@@ -9,4 +9,4 @@ You can also use quotation marks to search for multiple words within the same qu
 
 Here, I would search for "Sallust Historiae" to acquire the desired result.
 
-This website is a flask program hooked up to a SQL database. Please don't hesistate to contact me (@jinwkim365@gmail.com) if you have any  tournaments you want uploaded.
+This website is a flask program hooked up to a SQL database. Please don't hesistate to contact me (jinwkim365@gmail.com) if you have any  tournaments you want uploaded.
